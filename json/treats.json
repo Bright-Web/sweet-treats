@@ -1,0 +1,14 @@
+{
+    "treats": [
+        {
+            "name": "Macaroon",
+            "price": "0.30",
+            "image": "/assets/10-300x350.jpg"
+        },
+        {
+            "name": "Other",
+            "price": "1.30",
+            "image": "/assets/88-300x350.jpg"
+        }
+    ]
+}
