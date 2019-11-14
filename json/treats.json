@@ -1,74 +1,124 @@
 {
     "treats": [
         {
-            "name": "Macaroon",
-            "slug": "macaroon",
-            "price": "0.80",
-            "unit": "pack",
-            "perUnit": "10",
-            "image": "/assets/10-300x350.jpg",
+            "name": "Choc Chip Cookies",
+            "slug": "choc-chip-cookies",
+            "price": "0.25",
+            "unit": "each",
+            "perUnit": "1",
+            "image": "/assets/images/cookiesChocChip.jpg",
+            "category": "biscuits",
+            "flavours": ["Chocolate", "Double Chocolate", "White Chocolate"]
+        },
+        {
+            "name": "Donut",
+            "slug": "donut",
+            "price": "1.25",
+            "unit": "each",
+            "perUnit": "1",
+            "image": "/assets/images/donuts2.jpg",
             "category": "snacks",
-            "flavours": ["Chocolate", "Double Chocolate", "Rainbow"]
+            "flavours": ["Chocolate", "Iced Chocolate", "Iced Strawberry", "Boston Cream"]
         },
         {
-            "name": "Lolipops",
-            "slug": "lolipops",
-            "price": "2.50",
-            "unit": "bag",
-            "perUnit": "100",
-            "image": "/assets/88-300x350.jpg",
-            "category": "snacks",
-            "flavours": ["Strawberry", "Orange", "Raspberry", "Apple"]
+            "name": "Macaroons",
+            "slug": "macaroons",
+            "price": "4.65",
+            "unit": "dozen",
+            "perUnit": "12",
+            "image": "/assets/images/macaroonStack.jpg",
+            "category": "biscuits",
+            "flavours": ["Mixed flavours box"]
         },
         {
-            "name": "Lolipops",
-            "slug": "lolipops",
-            "price": "2.50",
-            "unit": "bag",
-            "perUnit": "100",
-            "image": "/assets/88-300x350.jpg",
-            "category": "snacks",
-            "flavours": ["Strawberry", "Orange", "Raspberry", "Apple"]
+            "name": "Premium Cake",
+            "slug": "premium-cake",
+            "price": "8.50",
+            "unit": "each",
+            "perUnit": "6",
+            "image": "/assets/images/chocCakeFancy.jpg",
+            "category": "cakes",
+            "flavours": ["Chocolate", "Double Chocolate", "White Chocolate"]
         },
         {
-            "name": "Lolipops",
-            "slug": "lolipops",
-            "price": "2.50",
-            "unit": "bag",
-            "perUnit": "100",
-            "image": "/assets/88-300x350.jpg",
-            "category": "candy",
-            "flavours": ["Strawberry", "Orange", "Raspberry", "Apple"]
+            "name": "Gingerbread Men",
+            "slug": "gingerbread-men",
+            "price": "3.50",
+            "unit": "dozen",
+            "perUnit": "12",
+            "image": "/assets/images/gbreadmen.jpg",
+            "category": "biscuits",
+            "flavours": ["Chocolate Iced", "Fruity Iced"]
         },
         {
-            "name": "Lolipops",
-            "slug": "lolipops",
-            "price": "2.50",
-            "unit": "bag",
-            "perUnit": "100",
-            "image": "/assets/88-300x350.jpg",
-            "category": "candy",
-            "flavours": ["Strawberry", "Orange", "Raspberry", "Apple"]
+            "name": "Cheesecake",
+            "slug": "cheesecake",
+            "price": "4.10",
+            "unit": "each",
+            "perUnit": "6",
+            "image": "/assets/images/cheesecake.jpg",
+            "category": "cakes",
+            "flavours": ["Chocolate", "Raspberry", "Strawberry", "Wildberry"]
         },
         {
-            "name": "Lolipops",
-            "slug": "lolipops",
-            "price": "2.50",
-            "unit": "bag",
-            "perUnit": "100",
-            "image": "/assets/88-300x350.jpg",
-            "category": "snacks",
-            "flavours": ["Strawberry", "Orange", "Raspberry", "Apple"]
+            "name": "Ice Cream Sundae",
+            "slug": "sundae",
+            "price": "1.35",
+            "unit": "each",
+            "perUnit": "1",
+            "image": "/assets/images/chocSun.jpg",
+            "category": "ice-cream",
+            "flavours": ["Chocolate", "Double Chocolate", "White Chocolate"]
         },
         {
-            "name": "Lolipops",
-            "slug": "lolipops",
-            "price": "2.50",
-            "unit": "bag",
-            "perUnit": "100",
-            "image": "/assets/88-300x350.jpg",
-            "category": "snacks",
-            "flavours": ["Strawberry", "Orange", "Raspberry", "Apple"]
+            "name": "Choc Chip Cookies",
+            "slug": "choc-chip-cookies",
+            "price": "0.25",
+            "unit": "each",
+            "perUnit": "1",
+            "image": "/assets/images/cookiesChocChip.jpg",
+            "category": "biscuits",
+            "flavours": ["Chocolate", "Double Chocolate", "White Chocolate"]
+        },
+        {
+            "name": "Choc Chip Cookies",
+            "slug": "choc-chip-cookies",
+            "price": "0.25",
+            "unit": "each",
+            "perUnit": "1",
+            "image": "/assets/images/cookiesChocChip.jpg",
+            "category": "biscuits",
+            "flavours": ["Chocolate", "Double Chocolate", "White Chocolate"]
+        },
+        {
+            "name": "Choc Chip Cookies",
+            "slug": "choc-chip-cookies",
+            "price": "0.25",
+            "unit": "each",
+            "perUnit": "1",
+            "image": "/assets/images/cookiesChocChip.jpg",
+            "category": "biscuits",
+            "flavours": ["Chocolate", "Double Chocolate", "White Chocolate"]
+        },
+        {
+            "name": "Choc Chip Cookies",
+            "slug": "choc-chip-cookies",
+            "price": "0.25",
+            "unit": "each",
+            "perUnit": "1",
+            "image": "/assets/images/cookiesChocChip.jpg",
+            "category": "biscuits",
+            "flavours": ["Chocolate", "Double Chocolate", "White Chocolate"]
+        },
+        {
+            "name": "Choc Chip Cookies",
+            "slug": "choc-chip-cookies",
+            "price": "0.25",
+            "unit": "each",
+            "perUnit": "1",
+            "image": "/assets/images/cookiesChocChip.jpg",
+            "category": "biscuits",
+            "flavours": ["Chocolate", "Double Chocolate", "White Chocolate"]
         }
     ]
 }

@@ -30,7 +30,8 @@ $(document).ready(function () {
         EL_TREATS_LIST.html(string);
         $('.card-hover').hide();
         cardHover();
-        addButtonClickListeners();
+        addButtonClickListeners()
+        hideQuote()
 
     }
 
@@ -47,11 +48,19 @@ $(document).ready(function () {
 
     // Add click listeners to buttons
 
-    function addButtonClickListeners () {
+    function addButtonClickListeners(){
+        addDetailsClickListener()
+        addQuoteClickListener()
+    }
+
+    // Set detail button click listener function and populate HTML
+
+    function addDetailsClickListener() {
         $('.button-details').on('click', function () {
             let treatSlug = $(this).data('slug');
             let treat = getTreatBySlug(treatSlug);
-            $('.lightbox-inner').html(getDetailsHTML(treat));
+            setDetailsHTML(treat);
+            showDetails();
             openLightbox();            
         });
         $('.lightbox-wrapper').on('click', function(){
@@ -59,11 +68,37 @@ $(document).ready(function () {
         });
     }
 
+    // Set detail button click listener function and populate HTML
+
+    function addQuoteClickListener(){
+        $('.button-quote').on('click', function () {
+            hideDetails();
+            showQuote();
+            openLightbox();            
+        });
+    }
+
+
+    // Hide and show
+    
     function openLightbox(){
         $('.lightbox').fadeIn('fast');
     }
     function closeLightbox(){
         $('.lightbox').fadeOut('fast');
+        hideQuote()
+    }    
+    function hideDetails(){
+        $('.details-wrapper').hide();
+    }
+    function showDetails(){
+        $('.details-wrapper').show();
+    }
+    function hideQuote(){
+        $('.quote-wrapper').hide();
+    }
+    function showQuote(){
+        $('.quote-wrapper').show();
     }
 
     // Find treat by name
@@ -79,26 +114,13 @@ $(document).ready(function () {
 
     // Get HTML for the clicked details button
 
-    function getDetailsHTML(treat) {
-        return `
-        <div class="details-image">
-            <img src="${treat.image}" alt="" srcset="">
-        </div>
-        <div class="details-info">
-            <div class="details-top">
-                <p class="details-name">${treat.name}</p>
-                <p class="details-price">$${treat.price} / ${treat.unit}</p>
-                <p class="details-units">${treat.perUnit} per ${treat.unit}</p>
-            </div>
-            <div class="details-bottom">
-                <p class="details-flavours-title">Available Flavours:</p>
-                <ul class="details-flavours">
-                ${getFlavoursHTML(treat)}
-                </ul>
-            </div>
-            <div class="button button-quote">Quote</div>
-        </div>
-        `
+    function setDetailsHTML(treat) {
+        $(".details-image-img").attr('src', treat.image);
+        $(".details-name").html(treat.name);
+        $(".details-price").html(treat.price + " / " + treat.unit);
+        $(".details-units").html(treat.perUnit + " per " + treat.unit);
+        $(".details-flavours").html(getFlavoursHTML(treat));
+
     }
 
     // Get HTML for treat flavours //

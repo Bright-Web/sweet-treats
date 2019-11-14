@@ -123,9 +123,6 @@ html {
 
 .lightbox-inner {
     background-color: white;
-    display: flex;
-    border-radius: 5px;
-    padding: 2rem;
     position: fixed;
 }
 .lightbox-wrapper{
@@ -140,4 +137,24 @@ html {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.details-wrapper {
+    display: flex;
+    border-radius: 5px;
+    padding: 2rem;
+}
+.quote-wrapper {
+    display: flex;
+    border-radius: 5px;
+    padding: 2rem;
+}
+.quote-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.quote-row{
+    display: flex;
+    flex-direction: column;
 }
