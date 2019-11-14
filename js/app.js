@@ -16,8 +16,7 @@ $(document).ready(function () {
             treatsArr = data.treats;
             displayTreats(treatsArr);
         });
-        $('.details').hide();
-        
+        closeLightbox()      
                 
     }
 
@@ -50,13 +49,66 @@ $(document).ready(function () {
 
     function addButtonClickListeners () {
         $('.button-details').on('click', function () {
-            $('.details').fadeIn('fast');
+            let treatSlug = $(this).data('slug');
+            let treat = getTreatBySlug(treatSlug);
+            $('.lightbox-inner').html(getDetailsHTML(treat));
+            openLightbox();            
         });
-        $('.details-wrapper').on('click', function(){
-            $('.details').fadeOut('fast');
+        $('.lightbox-wrapper').on('click', function(){
+            closeLightbox();
         });
     }
 
+    function openLightbox(){
+        $('.lightbox').fadeIn('fast');
+    }
+    function closeLightbox(){
+        $('.lightbox').fadeOut('fast');
+    }
+
+    // Find treat by name
+
+    function getTreatBySlug(treatSlug) {
+        for (let i = 0; i < treatsArr.length; i++) {
+            const treat = treatsArr[i];
+            if(treat.slug === treatSlug){
+                return treat;
+            }            
+        }       
+    }
+
+    // Get HTML for the clicked details button
+
+    function getDetailsHTML(treat) {
+        return `
+        <div class="details-image">
+            <img src="${treat.image}" alt="" srcset="">
+        </div>
+        <div class="details-info">
+            <div class="details-top">
+                <p class="details-name">${treat.name}</p>
+                <p class="details-price">$${treat.price} / ${treat.unit}</p>
+                <p class="details-units">${treat.perUnit} per ${treat.unit}</p>
+            </div>
+            <div class="details-bottom">
+                <p class="details-flavours-title">Available Flavours:</p>
+                <ul class="details-flavours">
+                ${getFlavoursHTML(treat)}
+                </ul>
+            </div>
+            <div class="button button-quote">Quote</div>
+        </div>
+        `
+    }
+
+    // Get HTML for treat flavours //
+    function getFlavoursHTML(treat){
+        let string = "";
+        $.each(treat.flavours, function(i, flavour){
+            string += `<li class="details-flavour">${flavour}</li>`
+        })
+        return string
+    }
 
 
     // Get HTML for each treat //
@@ -67,18 +119,20 @@ $(document).ready(function () {
             <div class="card-image">
                 <img src="${treat.image}" alt="">
                 <div class="card-hover">
-                    <div class="button button-quote">Quote</div>
-                    <div class="button button-details">Details</div>
+                    <div class="button button-quote" data-slug=${treat.slug}>Quote</div>
+                    <div class="button button-details" data-slug=${treat.slug}>Details</div>
                 </div>
             </div>
             <div class="card-info">
                 <p class="card-title">${treat.name}</p>
-                <p class="card-price">$${treat.price} / each</p>
+                <p class="card-price">$${treat.price} / ${treat.unit}</p>
             </div>
         </div>
         `
     }
 
+
+    
 
 
 

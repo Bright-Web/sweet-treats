@@ -2,13 +2,73 @@
     "treats": [
         {
             "name": "Macaroon",
-            "price": "0.30",
-            "image": "/assets/10-300x350.jpg"
+            "slug": "macaroon",
+            "price": "0.80",
+            "unit": "pack",
+            "perUnit": "10",
+            "image": "/assets/10-300x350.jpg",
+            "category": "snacks",
+            "flavours": ["Chocolate", "Double Chocolate", "Rainbow"]
         },
         {
-            "name": "Other",
-            "price": "1.30",
-            "image": "/assets/88-300x350.jpg"
+            "name": "Lolipops",
+            "slug": "lolipops",
+            "price": "2.50",
+            "unit": "bag",
+            "perUnit": "100",
+            "image": "/assets/88-300x350.jpg",
+            "category": "snacks",
+            "flavours": ["Strawberry", "Orange", "Raspberry", "Apple"]
+        },
+        {
+            "name": "Lolipops",
+            "slug": "lolipops",
+            "price": "2.50",
+            "unit": "bag",
+            "perUnit": "100",
+            "image": "/assets/88-300x350.jpg",
+            "category": "snacks",
+            "flavours": ["Strawberry", "Orange", "Raspberry", "Apple"]
+        },
+        {
+            "name": "Lolipops",
+            "slug": "lolipops",
+            "price": "2.50",
+            "unit": "bag",
+            "perUnit": "100",
+            "image": "/assets/88-300x350.jpg",
+            "category": "candy",
+            "flavours": ["Strawberry", "Orange", "Raspberry", "Apple"]
+        },
+        {
+            "name": "Lolipops",
+            "slug": "lolipops",
+            "price": "2.50",
+            "unit": "bag",
+            "perUnit": "100",
+            "image": "/assets/88-300x350.jpg",
+            "category": "candy",
+            "flavours": ["Strawberry", "Orange", "Raspberry", "Apple"]
+        },
+        {
+            "name": "Lolipops",
+            "slug": "lolipops",
+            "price": "2.50",
+            "unit": "bag",
+            "perUnit": "100",
+            "image": "/assets/88-300x350.jpg",
+            "category": "snacks",
+            "flavours": ["Strawberry", "Orange", "Raspberry", "Apple"]
+        },
+        {
+            "name": "Lolipops",
+            "slug": "lolipops",
+            "price": "2.50",
+            "unit": "bag",
+            "perUnit": "100",
+            "image": "/assets/88-300x350.jpg",
+            "category": "snacks",
+            "flavours": ["Strawberry", "Orange", "Raspberry", "Apple"]
         }
     ]
 }

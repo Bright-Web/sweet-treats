@@ -109,7 +109,7 @@ html {
     background-color: #e69b60;
 }
 
-.details {
+.lightbox {
     position: fixed;
     height: 100vh;
     width: 100vw;
@@ -121,23 +121,23 @@ html {
     align-items: center;
 }
 
-.details-inner {
+.lightbox-inner {
     background-color: white;
     display: flex;
     border-radius: 5px;
     padding: 2rem;
     position: fixed;
 }
-.details-info {
-    padding-left: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.details-wrapper{
+.lightbox-wrapper{
     position: fixed;
     height: 100vh;
     width: 100vw;
     top: 0;
     left: 0;
+}
+.details-info {
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
