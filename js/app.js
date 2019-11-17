@@ -4,6 +4,8 @@ $(document).ready(function () {
 
 
     let treatsArr = [];
+    let categoryArr = [];
+    let filteredArr = [];
 
 
     init();
@@ -13,11 +15,11 @@ $(document).ready(function () {
 
     function init(){
         $.getJSON('json/treats.json', function (data) {
-            treatsArr = data.treats;
-            displayTreats(treatsArr);
+            treatsArr = data.treats;            
+        displayTreats(treatsArr);        
+        getCategoryList()
         });
         closeLightbox()      
-                
     }
 
     // Display Treats //
@@ -66,6 +68,7 @@ $(document).ready(function () {
         $('.lightbox-wrapper').on('click', function(){
             closeLightbox();
         });
+
     }
 
     // Set detail button click listener function and populate HTML
@@ -117,8 +120,8 @@ $(document).ready(function () {
     function setDetailsHTML(treat) {
         $(".details-image-img").attr('src', treat.image);
         $(".details-name").html(treat.name);
-        $(".details-price").html(treat.price + " / " + treat.unit);
-        $(".details-units").html(treat.perUnit + " per " + treat.unit);
+        $(".details-price").html("$" + treat.price + " / " + treat.unit);
+        $(".details-units").html(treat.servings + " servings per " + treat.unit);
         $(".details-flavours").html(getFlavoursHTML(treat));
 
     }
@@ -130,6 +133,7 @@ $(document).ready(function () {
             string += `<li class="details-flavour">${flavour}</li>`
         })
         return string
+        
     }
 
 
@@ -154,6 +158,44 @@ $(document).ready(function () {
     }
 
 
+
+    function getCategoryList(){
+        $.each(treatsArr, function (i, treat) { 
+             let category = treat.category
+             if($.inArray(category, categoryArr) === -1){
+                 categoryArr.push(category)
+             }
+
+        });
+        $('.filter-list').html(getCategoryHtml());
+
+        $('.filter-item').on('click', function () {
+            let category = $(this).data('cat')
+            filteredArr = []
+            getFilteredList(category)
+            displayTreats(filteredArr);
+        });
+    }
+
+
+    function getFilteredList (category){
+        $.each(treatsArr, function (i, treat) { 
+             if(treat.category === category){
+                 filteredArr.push(treat)
+             }
+        });
+    }
+
+
+    function getCategoryHtml() {
+        let string = ""
+        $.each(categoryArr, function (i, category) { 
+             string += `
+             <li class="filter-item" data-cat=${category}>${category}</li>
+             `
+        });
+        return string
+    }
     
 
 

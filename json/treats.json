@@ -5,7 +5,7 @@
             "slug": "choc-chip-cookies",
             "price": "0.25",
             "unit": "each",
-            "perUnit": "1",
+            "servings": "1",
             "image": "/assets/images/cookiesChocChip.jpg",
             "category": "biscuits",
             "flavours": ["Chocolate", "Double Chocolate", "White Chocolate"]
@@ -15,7 +15,7 @@
             "slug": "donut",
             "price": "1.25",
             "unit": "each",
-            "perUnit": "1",
+            "servings": "1",
             "image": "/assets/images/donuts2.jpg",
             "category": "snacks",
             "flavours": ["Chocolate", "Iced Chocolate", "Iced Strawberry", "Boston Cream"]
@@ -25,7 +25,7 @@
             "slug": "macaroons",
             "price": "4.65",
             "unit": "dozen",
-            "perUnit": "12",
+            "servings": "12",
             "image": "/assets/images/macaroonStack.jpg",
             "category": "biscuits",
             "flavours": ["Mixed flavours box"]
@@ -35,7 +35,7 @@
             "slug": "premium-cake",
             "price": "8.50",
             "unit": "each",
-            "perUnit": "6",
+            "servings": "6",
             "image": "/assets/images/chocCakeFancy.jpg",
             "category": "cakes",
             "flavours": ["Chocolate", "Double Chocolate", "White Chocolate"]
@@ -45,7 +45,7 @@
             "slug": "gingerbread-men",
             "price": "3.50",
             "unit": "dozen",
-            "perUnit": "12",
+            "servings": "12",
             "image": "/assets/images/gbreadmen.jpg",
             "category": "biscuits",
             "flavours": ["Chocolate Iced", "Fruity Iced"]
@@ -55,7 +55,7 @@
             "slug": "cheesecake",
             "price": "4.10",
             "unit": "each",
-            "perUnit": "6",
+            "servings": "6",
             "image": "/assets/images/cheesecake.jpg",
             "category": "cakes",
             "flavours": ["Chocolate", "Raspberry", "Strawberry", "Wildberry"]
@@ -65,17 +65,48 @@
             "slug": "sundae",
             "price": "1.35",
             "unit": "each",
-            "perUnit": "1",
+            "servings": "1",
             "image": "/assets/images/chocSun.jpg",
             "category": "ice-cream",
-            "flavours": ["Chocolate", "Double Chocolate", "White Chocolate"]
+            "flavours": ["Chocolate", "Double Chocolate", "Vanilla"]
+        },
+        {
+            "name": "Ice Cream Stick",
+            "slug": "ice-cream-stick",
+            "price": "0.60",
+            "unit": "each",
+            "servings": "1",
+            "image": "/assets/images/iceCreamStick.jpg",
+            "category": "ice-cream",
+            "flavours": ["Rocky Road", "Chocolate", "Strawberry", "Choc Mint"]
+        },
+        {
+            "name": "Muffins",
+            "slug": "muffins",
+            "price": "2.99",
+            "unit": "dozen",
+            "servings": "12",
+            "image": "/assets/images/chocMuf.jpg",
+            "category": "cakes",
+            "flavours": ["Chocolate Chip", "Double Chocolate", "Blueberry", "Vanilla"]
+        },
+
+        {
+            "name": "Starburst Chews",
+            "slug": "starburst",
+            "price": "1.90",
+            "unit": "bag",
+            "servings": "10",
+            "image": "/assets/images/starburst.jpg",
+            "category": "candy",
+            "flavours": ["Assorted Flavours"]
         },
         {
             "name": "Choc Chip Cookies",
             "slug": "choc-chip-cookies",
             "price": "0.25",
             "unit": "each",
-            "perUnit": "1",
+            "servings": "1",
             "image": "/assets/images/cookiesChocChip.jpg",
             "category": "biscuits",
             "flavours": ["Chocolate", "Double Chocolate", "White Chocolate"]
@@ -85,7 +116,7 @@
             "slug": "choc-chip-cookies",
             "price": "0.25",
             "unit": "each",
-            "perUnit": "1",
+            "servings": "1",
             "image": "/assets/images/cookiesChocChip.jpg",
             "category": "biscuits",
             "flavours": ["Chocolate", "Double Chocolate", "White Chocolate"]
@@ -95,27 +126,7 @@
             "slug": "choc-chip-cookies",
             "price": "0.25",
             "unit": "each",
-            "perUnit": "1",
-            "image": "/assets/images/cookiesChocChip.jpg",
-            "category": "biscuits",
-            "flavours": ["Chocolate", "Double Chocolate", "White Chocolate"]
-        },
-        {
-            "name": "Choc Chip Cookies",
-            "slug": "choc-chip-cookies",
-            "price": "0.25",
-            "unit": "each",
-            "perUnit": "1",
-            "image": "/assets/images/cookiesChocChip.jpg",
-            "category": "biscuits",
-            "flavours": ["Chocolate", "Double Chocolate", "White Chocolate"]
-        },
-        {
-            "name": "Choc Chip Cookies",
-            "slug": "choc-chip-cookies",
-            "price": "0.25",
-            "unit": "each",
-            "perUnit": "1",
+            "servings": "1",
             "image": "/assets/images/cookiesChocChip.jpg",
             "category": "biscuits",
             "flavours": ["Chocolate", "Double Chocolate", "White Chocolate"]

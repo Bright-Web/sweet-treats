@@ -19,6 +19,8 @@ html {
   }
   ol, ul {
     list-style: none;
+    line-height: 1.2rem;
+    font-family: 'Roboto', sans-serif; 
   }
   
   img {
@@ -139,6 +141,10 @@ html {
     justify-content: space-between;
 }
 
+.details-image-img {
+    border-radius: 5px;
+}
+
 .details-wrapper {
     display: flex;
     border-radius: 5px;
@@ -157,4 +163,13 @@ html {
 .quote-row{
     display: flex;
     flex-direction: column;
+}
+
+.filter-list {
+    display: flex;
+}
+.filter-list li {
+    padding: 0 20px;
+    text-transform: uppercase;
+    cursor: pointer;
 }
