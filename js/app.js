@@ -7,6 +7,13 @@ $(document).ready(function () {
     let categoryArr = [];
     let filteredArr = [];
 
+    let quote = {
+        treat: "",
+        price: 0,
+        servings: 0,
+        event: "",
+        attendees: 0
+    };
 
     init();
 
@@ -75,10 +82,23 @@ $(document).ready(function () {
 
     function addQuoteClickListener(){
         $('.button-quote').on('click', function () {
-            hideDetails();
-            showQuote();
+            hideDetails();            
+            let treatSlug = $(this).data('slug')
+            let treat = getTreatBySlug(treatSlug)
+            setQuoteTreatDetails(treat)
+            showQuoteForm();
             openLightbox();            
         });
+    }
+
+    
+
+
+
+    function setQuoteTreatDetails (treat) {
+        quote.name = treat.name
+        quote.price = treat.price
+        quote.servings = treat.servings
     }
 
 
@@ -100,7 +120,7 @@ $(document).ready(function () {
     function hideQuote(){
         $('.quote-wrapper').hide();
     }
-    function showQuote(){
+    function showQuoteForm(){
         $('.quote-wrapper').show();
     }
 
@@ -127,6 +147,7 @@ $(document).ready(function () {
     }
 
     // Get HTML for treat flavours //
+    
     function getFlavoursHTML(treat){
         let string = "";
         $.each(treat.flavours, function(i, flavour){
@@ -197,6 +218,10 @@ $(document).ready(function () {
         return string
     }
     
+
+
+
+
 
 
 

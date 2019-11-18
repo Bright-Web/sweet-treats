@@ -28,7 +28,9 @@ html {
     height: auto;
     display: block;
   }
-
+a{
+    text-decoration: none;
+}
 .container{
     padding: 0 10% 0;
   }
