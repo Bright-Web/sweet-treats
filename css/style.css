@@ -128,6 +128,7 @@ a{
 .lightbox-inner {
     background-color: white;
     position: fixed;
+    border-radius: 5px;
 }
 .lightbox-wrapper{
     position: fixed;
@@ -154,6 +155,12 @@ a{
 }
 .quote-wrapper {
     display: flex;
+    border-radius: 5px;
+    padding: 2rem;
+}
+.pricing-wrapper {
+    display: flex;
+    flex-direction: column;
     border-radius: 5px;
     padding: 2rem;
 }

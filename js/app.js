@@ -1,6 +1,7 @@
 $(document).ready(function () {
     
     const EL_TREATS_LIST = $('.treats-list');
+    let form = document.querySelector('.quote-form');
 
 
     let treatsArr = [];
@@ -41,6 +42,7 @@ $(document).ready(function () {
         cardHover();
         addButtonClickListeners()
         hideQuote()
+        hidePricing()
 
     }
 
@@ -69,11 +71,13 @@ $(document).ready(function () {
             let treatSlug = $(this).data('slug');
             let treat = getTreatBySlug(treatSlug);
             setDetailsHTML(treat);
+            $('.button-quote').data('slug', treatSlug)
             showDetails();
             openLightbox();            
         });
         $('.lightbox-wrapper').on('click', function(){
             closeLightbox();
+
         });
 
     }
@@ -86,21 +90,41 @@ $(document).ready(function () {
             let treatSlug = $(this).data('slug')
             let treat = getTreatBySlug(treatSlug)
             setQuoteTreatDetails(treat)
-            showQuoteForm();
+            showQuote();
+            addPriceSubmitListener();
             openLightbox();            
         });
     }
-
     
-
-
-
-    function setQuoteTreatDetails (treat) {
-        quote.name = treat.name
-        quote.price = treat.price
-        quote.servings = treat.servings
+    function addPriceSubmitListener(){
+        $('.price-submit').on('click', function (){
+            quote.event = form.event.value;
+            quote.attendees = form.attendees.value;
+            hideQuote()
+            displayPricing()
+        });
     }
 
+    function setQuoteTreatDetails (treat) {
+        quote.treat = treat.name;
+        quote.price = treat.price;
+        quote.servings = treat.servings;
+        
+    }
+
+    function displayPricing (treat) {
+        let total = calculateTotal();
+        $('.pricing-event').html(quote.event)
+        $('.pricing-attendees').html(quote.attendees)
+        $('.pricing-treat').html(quote.treat)
+        $('.pricing-total').html("$" + total)
+        showPricing();
+    }
+
+    function calculateTotal () {
+        let total = (quote.attendees / quote.servings) * quote.price
+        return total
+    }
 
     // Hide and show
     
@@ -109,7 +133,9 @@ $(document).ready(function () {
     }
     function closeLightbox(){
         $('.lightbox').fadeOut('fast');
-        hideQuote()
+        hideDetails();
+        hidePricing();
+        hideQuote();
     }    
     function hideDetails(){
         $('.details-wrapper').hide();
@@ -120,8 +146,14 @@ $(document).ready(function () {
     function hideQuote(){
         $('.quote-wrapper').hide();
     }
-    function showQuoteForm(){
+    function showQuote(){
         $('.quote-wrapper').show();
+    }
+    function hidePricing(){
+        $('.pricing-wrapper').hide();
+    }
+    function showPricing(){
+        $('.pricing-wrapper').show();
     }
 
     // Find treat by name
