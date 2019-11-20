@@ -220,7 +220,11 @@ $(document).ready(function () {
              }
 
         });
+        $('.filter-list').hide();
         $('.filter-list').html(getCategoryHtml());
+        $('.filter-toggle').on('click', function(){
+            $('.filter-list').toggle('slide', { direction: 'down' });
+        })
 
         $('.filter-item').on('click', function () {
             let category = $(this).data('cat')
